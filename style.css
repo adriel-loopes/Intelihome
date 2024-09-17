@@ -1,0 +1,68 @@
+/* Definindo o gradiente de fundo para o body */
+body {
+    margin: 0; /* Remove a margem padrão do corpo da página */
+    font-family: Arial, sans-serif; /* Define a fonte como Arial ou uma fonte sem serifa */
+    background: linear-gradient(to right, #3498db, #8e44ad); /* Aplica um gradiente de azul para roxo no fundo */
+    color: #fff; /* Define a cor do texto como branco */
+}
+
+/* Estilizando o cabeçalho */
+header {
+    display: flex; /* Utiliza o modelo de layout flexível */
+    justify-content: space-between; /* Espaça os itens igualmente entre o início e o fim do container */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 20px; /* Adiciona 20 pixels de preenchimento ao redor do cabeçalho */
+    background-color: rgba(0, 0, 0, 0.7); /* Define um fundo preto semitransparente */
+}
+
+/* Estilizando o menu */
+nav ul {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    display: flex; /* Exibe os itens em linha usando o modelo flexível */
+    gap: 20px; /* Adiciona 20 pixels de espaço entre os itens */
+}
+
+nav ul li {
+    display: inline; /* Exibe cada item da lista em linha */
+}
+
+nav ul li a {
+    color: #fff; /* Define a cor do texto como branco */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    font-size: 18px; /* Define o tamanho da fonte dos links */
+}
+
+/* Estilo do contador do carrinho */
+#cart-count {
+    font-size: 18px; /* Define o tamanho da fonte do contador do carrinho */
+}
+
+/* Estilizando a seção de produtos */
+#products {
+    display: flex; /* Utiliza o layout flexível para organizar os produtos */
+    justify-content: space-around; /* Distribui os produtos igualmente ao longo do container */
+    padding: 40px; /* Adiciona 40 pixels de preenchimento ao redor da seção de produtos */
+}
+
+/* Estilizando cada produto */
+.product {
+    background-color: rgba(255, 255, 255, 0.1); /* Define um fundo branco semitransparente */
+    padding: 20px; /* Adiciona 20 pixels de preenchimento interno */
+    border-radius: 10px; /* Arredonda os cantos do container em 10 pixels */
+    text-align: center; /* Alinha o conteúdo ao centro */
+}
+
+/* Estilizando o botão */
+button {
+    background-color: #27ae60; /* Define a cor de fundo do botão como verde */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 10px 20px; /* Adiciona 10 pixels de preenchimento vertical e 20 pixels horizontal */
+    color: #fff; /* Define a cor do texto do botão como branco */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    border-radius: 5px; /* Arredonda os cantos do botão em 5 pixels */
+    font-size: 16px; /* Define o tamanho da fonte do botão */
+}
+
+button:hover {
+    background-color: #2ecc71; /* Muda a cor de fundo do botão quando o mouse passa sobre ele */
+}

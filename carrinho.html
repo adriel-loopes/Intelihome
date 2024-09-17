@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Intelihome</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menu superior -->
+    <header>
+        <h1>Intelihome</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+        <div id="cart-count">Carrinho: 0</div>
+    </header>
+
+    <!-- Detalhes do carrinho -->
+    <section id="cart">
+        <h2>Seu Carrinho</h2>
+        <div id="cart-items">
+            <!-- Itens do carrinho serão exibidos aqui -->
+        </div>
+        <button onclick="checkout()">Finalizar Compra</button>
+    </section>
+
+    <!-- Script externo JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Define que este é um documento HTML5. -->
+<html lang="en">
+<!-- Inicia o documento HTML, indicando que o idioma é inglês. -->
+<head>
+    <!-- Cabeçalho do documento, contendo metadados e links para recursos externos. -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8, suportando uma ampla gama de caracteres. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta a escala da página para garantir uma visualização adequada em dispositivos móveis. -->
+    <title>Intelihome</title>
+    <!-- Define o título da página, exibido na aba do navegador. -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Linka um arquivo CSS externo chamado "styles.css" para estilizar a página. -->
+</head>
+<body>
+    <!-- Início do corpo do documento, onde o conteúdo visível é colocado. -->
+
+    <!-- Menu superior -->
+    <header>
+        <!-- Cabeçalho da página, contendo o título do site e o menu de navegação. -->
+        <h1>Intelihome</h1>
+        <!-- Título do site. -->
+        <nav>
+            <!-- Início da barra de navegação. -->
+            <ul>
+                <!-- Lista não ordenada para os itens do menu. -->
+                <li><a href="#">Home</a></li>
+                <!-- Item do menu com um link (neste caso, apenas uma âncora sem destino). -->
+                <li><a href="#">Produtos</a></li>
+                <!-- Segundo item do menu. -->
+                <li><a href="#">Carrinho</a></li>
+                <!-- Terceiro item do menu. -->
+            </ul>
+        </nav>
+        <div id="cart-count">Carrinho: 0</div>
+        <!-- Contador do carrinho que mostra o número de itens adicionados. -->
+    </header>
+
+    <!-- Lista de produtos -->
+    <section id="products">
+        <!-- Seção onde os produtos disponíveis para compra serão listados. -->
+        <div class="product">
+            <!-- Divisão para o primeiro produto. -->
+            <img src="Imagens/smartwatch1.png" alt="Smartwatch 1">
+            <!-- Imagem do primeiro produto, com descrição alternativa "Smartwatch 1". -->
+            <h2>Smartwatch Modelo A</h2>
+            <!-- Título do primeiro produto. -->
+            <p>Preço: R$ 299,99</p>
+            <!-- Parágrafo mostrando o preço do produto. -->
+            <button onclick="addToCart('Smartwatch Modelo A', 299.99)">Adicionar ao Carrinho</button>
+            <!-- Botão para adicionar o produto ao carrinho, chamando a função JavaScript 'addToCart' com o nome e preço do produto. -->
+        </div>
+        <div class="product">
+            <!-- Divisão para o segundo produto. -->
+            <img src="Imagens/smartwatch2.png" alt="Smartwatch 2">
+            <!-- Imagem do segundo produto, com descrição alternativa "Smartwatch 2". -->
+            <h2>Smartwatch Modelo B</h2>
+            <!-- Título do segundo produto. -->
+            <p>Preço: R$ 399,99</p>
+            <!-- Parágrafo mostrando o preço do segundo produto. -->
+            <button onclick="addToCart('Smartwatch Modelo B', 399.99)">Adicionar ao Carrinho</button>
+            <!-- Botão para adicionar o segundo produto ao carrinho. -->
+        </div>
+        <div class="product">
+            <!-- Divisão para o terceiro produto. -->
+            <img src="Imagens/smartwatch3.png" alt="Smartwatch 3">
+            <!-- Imagem do terceiro produto, com descrição alternativa "Smartwatch 3". -->
+            <h2>Smartwatch Modelo C</h2>
+            <!-- Título do terceiro produto. -->
+            <p>Preço: R$ 499,99</p>
+            <!-- Parágrafo mostrando o preço do terceiro produto. -->
+            <button onclick="addToCart('Smartwatch Modelo C', 499.99)">Adicionar ao Carrinho</button>
+            <!-- Botão para adicionar o terceiro produto ao carrinho. -->
+        </div>
+    </section>
+
+    <!-- Script externo JavaScript -->
+    <script src="scripts.js"></script>
+    <!-- Inclui um arquivo JavaScript externo chamado "scripts.js" que conterá a lógica do site. -->
+</body>
+</html>
