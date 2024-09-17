@@ -1,9 +1,10 @@
 /* Definindo o gradiente de fundo para o body */
 body {
-    margin: 0; /* Remove a margem padrão do corpo da página */
+    margin: center; /* Remove a margem padrão do corpo da página */
     font-family: Arial, sans-serif; /* Define a fonte como Arial ou uma fonte sem serifa */
     background: linear-gradient(to right, #3498db, #8e44ad); /* Aplica um gradiente de azul para roxo no fundo */
     color: #fff; /* Define a cor do texto como branco */
+    padding: 10px; /* Adiciona 10 pixels de preenchimento ao redor do cabeçalho */
 }
 
 /* Estilizando o cabeçalho */
@@ -41,15 +42,20 @@ nav ul li a {
 #products {
     display: flex; /* Utiliza o layout flexível para organizar os produtos */
     justify-content: space-around; /* Distribui os produtos igualmente ao longo do container */
-    padding: 40px; /* Adiciona 40 pixels de preenchimento ao redor da seção de produtos */
+    padding: 90px; /* Adiciona 40 pixels de preenchimento ao redor da seção de produtos */
+    gap: 100px; /* Adiciona 20 pixels de espaço entre os itens */
+    margin-top: 2%;
+    object-fit: cover; /* A imagem será cortada para caber no contêiner */
 }
 
 /* Estilizando cada produto */
 .product {
     background-color: rgba(255, 255, 255, 0.1); /* Define um fundo branco semitransparente */
-    padding: 20px; /* Adiciona 20 pixels de preenchimento interno */
+    padding: 50px; /* Adiciona 30 pixels de preenchimento interno */
     border-radius: 10px; /* Arredonda os cantos do container em 10 pixels */
     text-align: center; /* Alinha o conteúdo ao centro */
+    margin-top: 2%;
+    object-fit: cover; /* A imagem será cortada para caber no contêiner */
 }
 
 /* Estilizando o botão */
@@ -65,4 +71,13 @@ button {
 
 button:hover {
     background-color: #2ecc71; /* Muda a cor de fundo do botão quando o mouse passa sobre ele */
+}
+
+.cesto {
+    background-image: url('Imagens/carroverde.png');
+    padding: 60px 70px; /* Adiciona 10 pixels de preenchimento vertical e 20 pixels horizontal */
+    border-radius: 10px; /* Arredonda os cantos do container em 10 pixels */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
