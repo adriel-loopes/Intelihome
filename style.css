@@ -12,11 +12,12 @@ header {
     display: flex; /* Utiliza o modelo de layout flexível */
     justify-content: space-between; /* Espaça os itens igualmente entre o início e o fim do container */
     align-items: center; /* Alinha os itens verticalmente ao centro */
-    padding: 20px; /* Adiciona 20 pixels de preenchimento ao redor do cabeçalho */
-    background-color: rgba(0, 0, 0, 0.7); /* Define um fundo preto semitransparente */
+    padding: 60px; /* Adiciona 60 pixels de preenchimento ao redor do cabeçalho */
+    background-color: rgba(0, 0, 0, 0.5); /* Define um fundo preto semitransparente */
+    border-radius: 10px; /* Arredonda os cantos da borda */
 }
 
-/* Estilizando o menu */
+/* Estilizando o menu (Home, Produtos, Crrinho e Checkout)*/
 nav ul {
     list-style: none; /* Remove os marcadores de lista padrão */
     display: flex; /* Exibe os itens em linha usando o modelo flexível */
@@ -27,23 +28,27 @@ nav ul li {
     display: inline; /* Exibe cada item da lista em linha */
 }
 
+/* Estilo dos links do menu */
 nav ul li a {
     color: #fff; /* Define a cor do texto como branco */
     text-decoration: none; /* Remove o sublinhado padrão dos links */
-    font-size: 18px; /* Define o tamanho da fonte dos links */
+    font-size: 25px; /* Define o tamanho da fonte dos links em 30px*/
+    margin-left: 8%; /* Adiciona margem à esquerda de 8 px*/
+
 }
 
 /* Estilo do contador do carrinho */
 #cart-count {
-    font-size: 18px; /* Define o tamanho da fonte do contador do carrinho */
+    font-size: 25px; /* Define o tamanho da fonte do contador do carrinho em 25 px*/
+    margin-left: 300px; /* Adiciona margem à esquerda em 10px*/
 }
 
 /* Estilizando a seção de produtos */
 #products {
     display: flex; /* Utiliza o layout flexível para organizar os produtos */
     justify-content: space-around; /* Distribui os produtos igualmente ao longo do container */
-    padding: 90px; /* Adiciona 40 pixels de preenchimento ao redor da seção de produtos */
-    gap: 100px; /* Adiciona 20 pixels de espaço entre os itens */
+    padding: 20px; /* Adiciona 20 pixels de preenchimento ao redor da seção de produtos */
+    gap: 50px; /* Adiciona 20 pixels de espaço entre os itens */
     margin-top: 2%;
     object-fit: cover; /* A imagem será cortada para caber no contêiner */
 }
@@ -51,11 +56,18 @@ nav ul li a {
 /* Estilizando cada produto */
 .product {
     background-color: rgba(255, 255, 255, 0.1); /* Define um fundo branco semitransparente */
-    padding: 50px; /* Adiciona 30 pixels de preenchimento interno */
+    padding: 20px; /* Adiciona 20 pixels de preenchimento interno (Borda Transparente)*/
     border-radius: 10px; /* Arredonda os cantos do container em 10 pixels */
     text-align: center; /* Alinha o conteúdo ao centro */
     margin-top: 2%;
     object-fit: cover; /* A imagem será cortada para caber no contêiner */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin:center; /* Adiciona margem à esquerda */
+    float: center; /* Alinha o carrinho ao centro */
 }
 
 /* Estilizando o botão */
@@ -73,11 +85,57 @@ button:hover {
     background-color: #2ecc71; /* Muda a cor de fundo do botão quando o mouse passa sobre ele */
 }
 
+/* Estilizando as propriedades do carrinho */
 .cesto {
-    background-image: url('Imagens/carroverde.png');
-    padding: 60px 70px; /* Adiciona 10 pixels de preenchimento vertical e 20 pixels horizontal */
-    border-radius: 10px; /* Arredonda os cantos do container em 10 pixels */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    width: 90px;
+    height: auto;
+    margin-left: 20px; /* Adiciona margem à esquerda */
+}
+
+/* Estilizando a imagem do carrinho */
+.cesto img {
+    width: 100%;
+    height: auto;
+    margin-left: -250px; /* Adiciona margem à esquerda */
+    float: center; /* Alinha o carrinho ao centro */
+}
+
+h1 {
+    font-size: 38px; /* Define o tamanho da fonte dos links em 30px*/
+    color: #8e44ad; /* Define um fundo roxo semitransparente */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilizando banner superior do Home */
+#bannerHome {
+    position: relative; /* Define o banner com position relativa */
+    height: auto; /* A altura será ajustada de acordo com o conteúdo */
+    display: flex; /* Flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza o banner horizontalmente */
+    align-items: center; /* Centraliza o banner verticalmente */
+    padding: 10px; /* Espaçamento ao redor do banner em 10px*/
+    margin-top: 90px;
+}
+
+.bannerSup {
+    max-width: 100%; /* A largura máxima será 100% do container */
+    text-align: center; /* Centraliza o conteúdo da div */
+}
+
+.bannerSup img {
+    width: 1320px; /* Define a largura da imagem */
+    height: auto; /* Define a altura da imagem */
+    margin-left: center; /* Alinha a imagem à direita */
+    margin-right: auto; /* Garante que a margem direita seja zero */
+    display: block; /* Faz a imagem se comportar como um bloco */
+    border-radius: 10px;
 }
