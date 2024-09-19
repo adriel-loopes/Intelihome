@@ -7,6 +7,12 @@ body {
     padding: 10px; /* Adiciona 10 pixels de preenchimento ao redor do cabeçalho */
 }
 
+/* Estilizando o Titulo INTELIHOME da página */
+h1 {
+    font-size: 38px; /* Define o tamanho da fonte dos links em 30px*/
+    color: #8e44ad; /* Define um fundo roxo semitransparente */
+}
+
 /* Estilizando o cabeçalho */
 header {
     display: flex; /* Utiliza o modelo de layout flexível */
@@ -17,7 +23,7 @@ header {
     border-radius: 10px; /* Arredonda os cantos da borda */
 }
 
-/* Estilizando o menu (Home, Produtos, Crrinho e Checkout)*/
+/* Estilizando o menu (Home, Produtos, Carrinho e Checkout)*/
 nav ul {
     list-style: none; /* Remove os marcadores de lista padrão */
     display: flex; /* Exibe os itens em linha usando o modelo flexível */
@@ -48,7 +54,7 @@ nav ul li a {
     display: flex; /* Utiliza o layout flexível para organizar os produtos */
     justify-content: space-around; /* Distribui os produtos igualmente ao longo do container */
     padding: 20px; /* Adiciona 20 pixels de preenchimento ao redor da seção de produtos */
-    gap: 50px; /* Adiciona 20 pixels de espaço entre os itens */
+    gap: 40px; /* Adiciona 40 pixels de espaço entre os itens */
     margin-top: 2%;
     object-fit: cover; /* A imagem será cortada para caber no contêiner */
 }
@@ -57,22 +63,24 @@ nav ul li a {
 .product {
     background-color: rgba(255, 255, 255, 0.1); /* Define um fundo branco semitransparente */
     padding: 20px; /* Adiciona 20 pixels de preenchimento interno (Borda Transparente)*/
-    border-radius: 10px; /* Arredonda os cantos do container em 10 pixels */
+    border-radius: 20px; /* Arredonda os cantos do container em 20 pixels */
     text-align: center; /* Alinha o conteúdo ao centro */
     margin-top: 2%;
     object-fit: cover; /* A imagem será cortada para caber no contêiner */
 }
 
+/* Estiliza as imagens dos produtos na página produto */
 .product img {
-    width: 100%;
+    width: 70%;
     height: auto;
     margin:center; /* Adiciona margem à esquerda */
     float: center; /* Alinha o carrinho ao centro */
+    border-radius: 20px; /* Arredonda os cantos do container em 20 pixels */
 }
 
 /* Estilizando o botão */
 button {
-    background-color: #27ae60; /* Define a cor de fundo do botão como verde */
+    background-color: #f39c12; /* Define a cor de fundo do botão como verde */
     border: none; /* Remove a borda padrão do botão */
     padding: 10px 20px; /* Adiciona 10 pixels de preenchimento vertical e 20 pixels horizontal */
     color: #fff; /* Define a cor do texto do botão como branco */
@@ -81,8 +89,9 @@ button {
     font-size: 16px; /* Define o tamanho da fonte do botão */
 }
 
+/* Estilizando o botão ao passar sobre o mouse */
 button:hover {
-    background-color: #2ecc71; /* Muda a cor de fundo do botão quando o mouse passa sobre ele */
+    background-color: orange; /* Muda a cor de fundo do botão quando o mouse passa sobre ele */
 }
 
 /* Estilizando as propriedades do carrinho */
@@ -100,10 +109,7 @@ button:hover {
     float: center; /* Alinha o carrinho ao centro */
 }
 
-h1 {
-    font-size: 38px; /* Define o tamanho da fonte dos links em 30px*/
-    color: #8e44ad; /* Define um fundo roxo semitransparente */
-}
+
 
 
 

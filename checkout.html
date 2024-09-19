@@ -1,39 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Intelihome</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
 </head>
 <body>
-    <!-- Menu superior -->
-    <header>
-        <h1>Intelihome</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
-            </ul>
-        </nav>
-        <div id="cart-count">Carrinho: 0</div>
-    <div class="cesto">
-        <img src="Imagens/carroverde.png" alt="Carrinho de Compras">
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        <form id="checkoutForm">
+            <label for="name">Nome Completo</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+            <label for="address">Endereço</label>
+            <input type="text" id="address" name="address" placeholder="Digite seu endereço" required>
+
+            <label for="card">Número do Cartão</label>
+            <input type="text" id="card" name="card" placeholder="Digite o número do cartão" required>
+
+            <label for="expiry">Data de Expiração</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/AA" required>
+
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" placeholder="Digite o CVV" required>
+
+            <button type="submit">Finalizar Compra</button>
+        </form>
     </div>
-    </header>
 
-    <!-- Resumo da compra -->
-    <section id="checkout">
-        <h2>Finalizar Compra</h2>
-        <div id="checkout-summary">
-            <!-- Resumo da compra será exibido aqui -->
-        </div>
-        <button onclick="confirmPurchase()">Confirmar Compra</button>
-    </section>
+    <script>
+        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita o envio padrão do formulário
 
-    <!-- Script externo JavaScript -->
-    <script src="scripts.js"></script>
+            const formData = new FormData(this);
+
+            fetch('/checkout', {
+                method: 'POST',
+                body: new URLSearchParams(formData)
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data); // Mostra a mensagem de sucesso ou erro
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
+        });
+    </script>
 </body>
 </html>
