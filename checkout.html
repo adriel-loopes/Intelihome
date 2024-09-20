@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
-    <link rel="stylesheet" href="checkout.css">
+    <title>Carrinho - Intelihome</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="checkout-container">
+    <!-- Menu superior -->
+    <header>
+        <h1>Intelihome</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+        <div id="cart-count">Carrinho: 0</div>
+        <div class="cesto">
+            <img src="Imagens/carroverde.png" alt="Carrinho de Compras">
+        </div>
+    </header>
+
+
+    <section class="checkout-container">
         <h1>Checkout</h1>
-        <form id="checkoutForm">
+        <form  id="checkoutForm">
             <label for="name">Nome Completo</label>
             <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
 
@@ -30,26 +48,9 @@
 
             <button type="submit">Finalizar Compra</button>
         </form>
-    </div>
+    </section>
 
-    <script>
-        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita o envio padrão do formulário
-
-            const formData = new FormData(this);
-
-            fetch('/checkout', {
-                method: 'POST',
-                body: new URLSearchParams(formData)
-            })
-            .then(response => response.text())
-            .then(data => {
-                alert(data); // Mostra a mensagem de sucesso ou erro
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-            });
-        });
-    </script>
+    <!-- Script externo JavaScript -->
+    <script src="scripts.js"></script>
 </body>
 </html>

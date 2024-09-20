@@ -1,48 +1,45 @@
-/* Fundo com gradiente */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #3498db, #8e44ad);
+/* Garantir que html e body ocupem toda a tela */
+html, body {
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background: linear-gradient(to right, #3498db, #8e44ad); /* Aplica um gradiente de azul para roxo no fundo */
 }
 
 /* Contêiner do checkout */
 .checkout-container {
     background-color: white;
-    padding: 40px;
+    padding: 100px; /* Ajuste o preenchimento conforme necessário */
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
+    max-width: 1200px; /* Largura máxima do contêiner */
+    width: 10%; /* Largura 10% até o máximo permitido */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    height: 50%;
 }
 
 /* Título do checkout */
 .checkout-container h1 {
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 30px; /* Margem inferior para separar do formulário */
+    color: #333; /* Cor do texto do título */
 }
 
-/* Formulário de checkout */
+/* Estilizando o formulário */
 .checkout-form {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: column; /* Coloca os itens em coluna */
+    gap: 15px; /* Espaçamento entre os elementos */
 }
 
 /* Labels e Inputs */
-.checkout-form label {
+.checkout-container label {
     font-size: 14px;
     color: #333;
-    text-align: left;
-    margin-bottom: 5px;
+    text-align: left; /* Alinha os labels à esquerda */
 }
 
-.checkout-form input {
+.checkout-container input {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -50,18 +47,82 @@ body {
 }
 
 /* Botão de finalizar compra */
-.checkout-form button {
-    background-color: #f39c12;
-    color: white;
+.checkout-container button {
+    background-color: #f39c12; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
     padding: 12px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
     font-size: 16px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Transição suave para a cor do botão */
 }
 
-.checkout-form button:hover {
-    background-color: #e67e22;
+.checkout-container button:hover {
+    background-color: #e67e22; /* Cor do botão ao passar o mouse */
+}
+
+
+
+
+
+
+
+
+/* Estilizando o cabeçalho */
+header {
+    display: flex; /* Utiliza o modelo de layout flexível */
+    justify-content: space-between; /* Espaça os itens igualmente entre o início e o fim do container */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 60px; /* Adiciona 60 pixels de preenchimento ao redor do cabeçalho */
+    background-color: rgba(0, 0, 0, 0.5); /* Define um fundo preto semitransparente */
+    border-radius: 10px; /* Arredonda os cantos da borda */
+}
+
+/* Estilizando o menu (Home, Produtos, Carrinho e Checkout)*/
+nav ul {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    display: flex; /* Exibe os itens em linha usando o modelo flexível */
+    gap: 20px; /* Adiciona 20 pixels de espaço entre os itens */
+}
+
+nav ul li {
+    display: inline; /* Exibe cada item da lista em linha */
+}
+
+/* Estilo dos links do menu */
+nav ul li a {
+    color: #fff; /* Define a cor do texto como branco */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    font-size: 25px; /* Define o tamanho da fonte dos links em 30px*/
+    margin-left: 8%; /* Adiciona margem à esquerda de 8 px*/
+
+}
+
+/* Estilizando o Titulo INTELIHOME da página */
+h1 {
+    font-size: 38px; /* Define o tamanho da fonte dos links em 30px*/
+    color: #8e44ad; /* Define um fundo roxo semitransparente */
+}
+
+/* Estilo do contador do carrinho */
+#cart-count {
+    font-size: 25px; /* Define o tamanho da fonte do contador do carrinho em 25 px*/
+    margin-left: 300px; /* Adiciona margem à esquerda em 10px*/
+}
+
+/* Estilizando as propriedades do carrinho */
+.cesto {
+    width: 90px;
+    height: auto;
+    margin-left: 20px; /* Adiciona margem à esquerda */
+}
+
+/* Estilizando a imagem do carrinho */
+.cesto img {
+    width: 100%;
+    height: auto;
+    margin-left: -250px; /* Adiciona margem à esquerda */
+    float: center; /* Alinha o carrinho ao centro */
 }

@@ -120,7 +120,6 @@ button:hover {
 
 
 
-
 /* Estilizando banner superior do Home */
 #bannerHome {
     position: relative; /* Define o banner com position relativa */
@@ -145,3 +144,4 @@ button:hover {
     display: block; /* Faz a imagem se comportar como um bloco */
     border-radius: 10px;
 }
+
